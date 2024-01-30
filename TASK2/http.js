@@ -21,7 +21,7 @@ const server = http.createServer((req, res) => {
     }
 });
 
-function servePage(filePath, res, statusCode = 300) {
+function servePage(filePath, res, statusCode = 200) {
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
             res.writeHead(500);
